@@ -80,7 +80,7 @@ func main() {
 	pflag.CommandLine.AddGoFlagSet(flag.CommandLine)
 	pflag.Parse()
 
-	if err := logOptions.ValidateAndApply(nil); err != nil {
+	if err := logOptions.ValidateAndApply(); err != nil {
 		setupLog.Error(err, "unable to start extension")
 		os.Exit(1)
 	}

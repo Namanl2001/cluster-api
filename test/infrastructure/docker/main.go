@@ -117,7 +117,7 @@ func main() {
 	pflag.CommandLine.SetNormalizeFunc(cliflag.WordSepNormalizeFunc)
 	pflag.Parse()
 
-	if err := logOptions.ValidateAndApply(nil); err != nil {
+	if err := logOptions.ValidateAndApply(); err != nil {
 		setupLog.Error(err, "unable to start manager")
 		os.Exit(1)
 	}

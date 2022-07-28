@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       containers:
-      - image: gcr.io/k8s-staging-cluster-api/cluster-api-controller:main
+      - image: gcr.io/k8s-staging-cluster-api/cluster-api-controller-amd64:dev
         name: manager
         volumeMounts:
           - name: socket-dir

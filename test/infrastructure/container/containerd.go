@@ -411,7 +411,7 @@ func (c *containerdRuntime) ContainerDebugInfo(ctx context.Context, containerNam
 			}()
 
 			fmt.Fprintln(w, "Got logs from the container:")
-			return jsonfile.Decode(w, w, reader, false, "", "", logsEOFChan)
+			return jsonfile.Decode(w, w, reader, false, "", "")
 		},
 	}
 	n, err = walker.Walk(ctx, containerName)
